@@ -278,6 +278,17 @@ func cplayHandler(m *tg.NewMessage) error {
 }
 
 func handlePlay(m *tg.NewMessage, opts *playOpts) error {
+	        // 🔥 Auto-delete user command after 2 seconds
+        if m != nil && m.Message != nil {
+                chatID := m.Message.Chat.ID
+                msgID := m.Message.ID
+
+                go func() {
+                        time.Sleep(2 * time.Second)
+                        _, _ = m.Client.DeleteMessages(chatID, []int{msgID})
+                }()
+        }
+	
 	mention := utils.MentionHTML(m.Sender)
 
 	r, replyMsg, err := prepareRoomAndSearchMessage(m, opts.CPlay)
