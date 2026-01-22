@@ -854,11 +854,16 @@ stream_downloading_next: "📥 Downloading your next track..."
 stream_download_fail: "❌ Failed to download.\nError: <code>{error}</code>\nUse /skip to skip playback."
 stream_play_fail: "❌ Failed to play the song."
 stream_now_playing: |
-  <b>🎵 Now Playing:</b>
+  ╭━━━━━━━━━━━━━━━╮
+   🎧 <b>Now Playing</b> 🎶
+  ╰━━━━━━━━━━━━━━━╯
 
-  <b>▫ Track:</b> <a href="{url}">{title}</a>
-  <b>▫ Duration:</b> {duration}
-  <b>▫ Requested by:</b> {by}
+    🏷️ <b>Title:</b> <a href="{url}">{title}</a>
+    ⏱️ <b>Duration:</b> {duration}
+    👤 <b>Requested by:</b> {by}
+
+    ━━━━━━━━━━━━━━━━
+  ✨ <i>Enjoy the music with ❤️</i>
 
 # 👑 Sudo / Owner Join Messages
 sudo_join_owner: "👑 {user} — owner of {bot} — just entered the chat."
